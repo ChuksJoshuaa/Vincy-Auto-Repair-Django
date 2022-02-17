@@ -1,0 +1,95 @@
+{% extends "others/base3.html" %}
+{% load static %}
+
+{% block name %}
+
+<div class="admin">
+    <div class="customer-head">
+        <div class="customer" data-aos="zoom-in-right">
+            {% if mechanic.image.url is None %}
+                 <img src="{% static 'images/default.jpg' %}" alt="{{ mechanic }}"/>
+            {% else %}
+                 <img src="{{ mechanic.image.url }}" alt="{{ mechanic }}"/>
+            {% endif %}
+                <h1><i class="fa fa-user" aria-hidden="true"></i> <span style="color: black;">{{ mechanic }}!</span></h1>
+                 <h1 style="color: rgba(0, 255, 0, 0.5);"><i class="fa fa-circle"></i><span>online</span></h1>
+                <h1><a href="/single_mechanic/{{ mechanic.id }}"><i class="fa fa-edit"></i> <span style="color: black;">Info</span></a>
+            </h1>
+        </div>
+        <div class="second-admin" data-aos="zoom-in-left">
+            <div class="second-admin-head">
+                <div class="second-admin-body">
+                    <h1>{{ work_completed }}</h1>
+                    <p><i class="fa fa-shopping-bag" aria-hidden="true"></i></p>
+                </div>
+                <h2>Vehicle Repaired</h2>
+            </div>
+            <div class="second-admin-head">
+                <div class="second-admin-body">
+                    <h1>{{ work_in_progress }}</h1>
+                    <p><i class="fa fa-renren" aria-hidden="true"></i></p>
+                </div>
+                <h2>Repair In Progress</h2>
+            </div>
+            <div class="second-admin-head">
+                <div class="second-admin-body">
+                    <h1>{{ request }}</h1>
+                    <p><i class="fa fa-line-chart" aria-hidden="true"></i></p>
+                </div>
+                <h2>Request Made</h2>
+            </div>
+            <div class="second-admin-head">
+                <div class="second-admin-body">
+                    <h1>{{ new_work_assigned }}</h1>
+                    <p><i class="fa fa-check" aria-hidden="true"></i></p>
+                </div>
+                <h2>Task</h2>
+            </div>
+             <div class="second-admin-head">
+                <div class="second-admin-body">
+                    <h1>{{ work }}</h1>
+                    <p><i class="fa fa-check" aria-hidden="true"></i></p>
+                </div>
+                <h2>Task Completed</h2>
+            </div>
+        </div>
+    </div>
+    <div class="table-responsive" style="margin-top: 5%;" data-aos="fade-right">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th scope="col">Username</th>
+                <th scope="col">Vehicle No.</th>
+                <th scope="col">Vehicle Name</th>
+                <th scope="col">Vehicle Model</th>
+                <th scope="col">Vehicle Brand</th>
+                <th scope="col">Problem Description</th>
+                <th scope="col">Cost</th>
+                <th scope="col">Status</th>
+                <th scope="col">Edit</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for c,r in data %}
+            <tr>
+                <td>{{ c.username }}</td>
+                <td>{{ r.vehicle_no }}</td>
+                <td>{{ r.vehicle_name }}</td>
+                <td>{{ r.vehicle_model }}</td>
+                <td>{{ r.vehicle_brand }}</td>
+                <td>{{ r.problem_description }}</td>
+                {% if r.cost is None %}
+                <td>$0</td>
+                {% else %}
+                <td>${{ r.cost }}</td>
+                {% endif %}
+                <td>{{ r.status }}</td>
+                <td><a class="btn btn-primary" href="/update_request/{{r.id}}"><i
+                        class="fa fa-edit"></i></a></td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock%}

@@ -1,0 +1,91 @@
+{% extends "others/base3.html" %}
+{% load static %}
+
+{% block name %}
+
+<div>
+    <div class="admin">
+        <div class="admin-head">
+            <div class="admin-first">
+                <h1><i class="fa fa-user" aria-hidden="true"></i> {{ admin }}</h1>
+                <p><a href="{% url 'view_personnel' %}"><i class="fa fa-users" aria-hidden="true" style="color: rgb(255, 107, 107);"></i>
+                    Personnel</a></p>
+                <p><a href="{% url 'admin_contact' %}"><i class="fa fa-phone" aria-hidden="true" style="color: rgb(255, 107, 107);"></i>
+                    Contact</a></p>
+                <p><a href="{% url 'attendance' %}"><i class="fa fa-archive" aria-hidden="true" style="color: rgb(255, 107, 107);"></i>
+                    Attendance</a></p>
+                <p><a href="{% url 'admin_letter' %}"><i class="fa fa-newspaper-o" aria-hidden="true" style="color: rgb(255, 107, 107);"></i>
+                    NewsLetter</a></p>
+                <p style="border-bottom: 0;"><a href="{% url 'admin_feedback' %}"><i class="fa fa-tasks" aria-hidden="true"
+                                                           style="color: rgb(255, 107, 107);"></i> Feedback</a></p>
+            </div>
+            <div class="second-admin">
+                <div class="second-admin-head">
+                    <div class="second-admin-body">
+                        <h1>{{ customer_count }}</h1>
+                        <p><i class="fa fa-university" aria-hidden="true"></i></p>
+                    </div>
+                    <h2>Customer</h2>
+                </div>
+                <div class="second-admin-head">
+                    <div class="second-admin-body">
+                        <h1>{{ mechanic }}</h1>
+                        <p><i class="fa fa-shopping-bag" aria-hidden="true"></i></p>
+                    </div>
+                    <h2>Mechanic</h2>
+                </div>
+                <div class="second-admin-head">
+                    <div class="second-admin-body">
+                        <h1>{{ feedback }}</h1>
+                        <p><i class="fa fa-renren" aria-hidden="true"></i></p>
+                    </div>
+                    <h2>Feedback</h2>
+                </div>
+                <div class="second-admin-head">
+                    <div class="second-admin-body">
+                        <h1>{{ request }}</h1>
+                        <p><i class="fa fa-line-chart" aria-hidden="true"></i></p>
+                    </div>
+                    <h2>Request</h2>
+                </div>
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th scope="col">Customer Name</th>
+                    <th scope="col">Vehicle No.</th>
+                    <th scope="col">Vehicle Name</th>
+                    <th scope="col">Vehicle Model</th>
+                    <th scope="col">Vehicle Brand</th>
+                    <th scope="col">Problem Description</th>
+                    <th scope="col">Cost</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Edit</th>
+                    <th scope="col">Delete</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for c,r in data %}
+                <tr>
+                    <td>{{ c.username }}</td>
+                    <td>{{ r.vehicle_no }}</td>
+                    <td>{{ r.vehicle_name }}</td>
+                    <td>{{ r.vehicle_model }}</td>
+                    <td>{{ r.vehicle_brand }}</td>
+                    <td>{{ r.problem_description }}</td>
+                    <td>${{ r.cost }}</td>
+                    <td>{{ r.status }}</td>
+                    <td><a class="btn btn-primary" href="/update_request/{{r.id}}"><i
+                            class="fa fa-edit"></i></a></td>
+                    <td><a class="btn btn-danger" href="/delete_request/{{ r.id }}"><i class="fa fa-trash"></i></a>
+                    </td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

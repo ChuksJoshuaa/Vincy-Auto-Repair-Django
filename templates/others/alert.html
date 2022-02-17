@@ -1,0 +1,25 @@
+
+{% if messages %}
+    {% for mess in messages %}
+        <div id="mess" class="container">
+            <div class="alert alert-{{  mess.tags }} alert-dismissable text-center" role="alert">
+                <button type="button" class="close" data-dismiss="alert">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <strong>
+                    {% if mess.level == DEFAULT_MESSAGE_LEVELS. %}
+                        Error:
+                    {% else %}
+                        {{ mess.tags|title }}
+                    {% endif %}
+                </strong>
+                {{ mess }}
+            </div>
+        </div>
+    {% endfor %}
+{% endif %}
+
+ <script>
+     $(".alert").alert('close')
+     $('.alert').alert()
+ </script>

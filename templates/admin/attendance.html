@@ -1,0 +1,18 @@
+{% extends "others/base1.html" %}
+{% load static %}
+{% load humanize %}
+
+{% block name %}
+
+<div class="status">
+    <h5>Attendance Sheet</h5>
+    <div class="status-body">
+        {% for instance in attendance %}
+        <h1>{{ instance.id }}- Username: {{ instance.mechanic }}</h1>
+         <h2>----Present_Status: {{ instance.present_status }}</h2>
+        <p>----Signed: {{ instance.date| naturaltime }}</p>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock%}

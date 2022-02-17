@@ -1,0 +1,57 @@
+{% extends "others/base1.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block name %}
+
+<body style="background: rgba(212, 205, 207, 0.5);">
+<h1 style="margin-bottom: 3%;"></h1>
+<div class="both container">
+    <form action="." enctype="multipart/form-data" method="POST">{% csrf_token %}
+        <fieldset class="field" style=" box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; border: 1px solid silver;">
+            <div class="join"
+                 style="background: rgba(220, 20, 60, 0.6); text-transform: uppercase; font-family: 'Amiri', serif;">
+                Request Form
+            </div>
+            <br>
+            <div class="form-group1">
+                <label for="category" class="col-form-label">Category:</label>
+                <select class="form-control" name="category">
+                    <option value="two wheeler with gear">two wheeler with gear</option>
+                    <option value="two wheeler without gear">two wheeler without gear</option>
+                    <option value="three wheeler">three wheeler</option>
+                    <option value="four wheeler">four wheeler</option>
+                </select>
+            </div>
+            <div class="form-group1">
+                <label for="vehicle_no" class="col-form-label">Vehicle_no:</label>
+                <input type="text" name="vehicle_no" class="form-control">
+            </div>
+            <div class="form-group1">
+                <label for="vehicle_name" class="col-form-label">Vehicle_name:</label>
+                <input type="text" name="vehicle_name" class="form-control">
+            </div>
+            <div class="form-group1">
+                <label for="vehicle_brand" class="col-form-label">Vehicle_brand:</label>
+                <input type="text" name="vehicle_brand" class="form-control">
+            </div>
+            <div class="form-group1">
+                <label for="vehicle_model" class="col-form-label">Vehicle_model:</label>
+                <input type="text" name="vehicle_model" class="form-control">
+            </div>
+            <div class="form-group1">
+                <label for="problem_description" class="col-form-label">Problem_description:</label>
+                <textarea name="problem_description" class="form-control"></textarea>
+            </div>
+            <br>
+            <div class="sign-in">
+                <button type="submit" class="btn btn-primary" style="background: rgba(220, 20, 60, 0.6);
+             border: 1px solid silver; font-family: 'Amiri', serif;">Submit
+                </button>
+            </div>
+        </fieldset>
+    </form>
+</div>
+
+</body>
+{% endblock %}

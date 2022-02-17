@@ -1,0 +1,33 @@
+{% extends "others/base1.html" %}
+{% load static %}
+
+{% block name %}
+<div class="person">
+    <div class="person-head">
+        <div class="person-body">
+            <h1>Customer</h1>
+            {% for instance in customer %}
+            <div class="person-born">
+                <h2>{{ instance.id }}-{{ instance.username }}</h2>
+                <div class="person-child">
+                    <p><a class="btn btn-primary" href="{{ instance.get_absolute_url }}"><i class="fa fa-edit"></i></a>
+                        <span><a class="btn btn-danger" href="{{ instance.get_person }}"><i class="fa fa-trash"></i></a></span></p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div style="color: red;" class="person-body">
+            <h1>Mechanic</h1>
+            {% for instance in mechanic %}
+            <div class="person-born">
+                <h2>{{ instance.id }}-{{ instance.username }}</h2>
+                <div class="person-child">
+                    <p><a class="btn btn-primary" href="{{ instance.get_absolute_url }}"><i class="fa fa-edit"></i></a>
+                        <span><a class="btn btn-danger" href="{{ instance.get_person }}"><i class="fa fa-trash"></i></a></span></p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock%}

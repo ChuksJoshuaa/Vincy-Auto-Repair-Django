@@ -1,0 +1,72 @@
+{% load static %}
+<body>
+<header role="banner" id="nav">
+    <nav class="navbar navbar-expand-md navbar-grey bg-dark">
+        <div class="container ">
+            <img width="50px;" style="border-radius: 60%;" src="{% static 'images/logo.jpg' %}"
+                 alt="This is a logo"><span
+                style="font-family: 'Great Vibes', cursive; font-size: 2.5rem; color: white;">
+             Vin<span style="color: red;">cy</span></span>
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarsExample05" aria-controls="navbarsExample05"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExample05">
+                <ul class="navbar-nav ml-auto pl-lg-5 pl-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'home' %}"
+                           style="color: white; font-family: 'Rajdhani', sans-serif; font-size: 1.2rem; font-weight: 400;">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'about' %}"
+                           style="color: white; font-family: 'Rajdhani', sans-serif; font-size: 1.2rem; font-weight: 400;">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'contact' %}"
+                           style="color: white; font-family: 'Rajdhani', sans-serif; font-size: 1.2rem; font-weight: 400;">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                           style="color: white; font-family: 'Rajdhani', sans-serif;
+                       font-size: 1.2rem; font-weight: 400;">Profile</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown04">
+                            {% if customer %}
+                            <a class="dropdown-item" href="{% url 'user_dashboard' %}"
+                               style="color: black;">Dashboard</a>
+                            <a class="dropdown-item" href="{% url 'customer_request' %}"
+                               style="color: black;">Request</a>
+                            <a class="dropdown-item" href="{% url 'customer_feedback' %}"
+                               style="color: black;">Feedback</a>
+                            {% elif admin %}
+                            <a class="dropdown-item" href="{% url 'admin_dashboard' %}"
+                               style="color: black;">Dashboard</a>
+                            {% else %}
+                            <a class="dropdown-item" href="{% url 'mechanic_dashboard' %}" style="color: black;">Dashboard</a>
+                            <a class="dropdown-item" href="{% url 'mechanic_attendance' %}" style="color: black;">Attendance</a>
+                            {% endif %}
+                        </div>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav ml-auto pl-lg-5 pl-0">
+                    <li style="visibility: hidden;">Yes</li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false"
+                           style="color: white; font-family: 'Rajdhani',
+                         sans-serif; font-size: 1.2rem; font-weight: 400;"><i class="fa fa-sign-out"
+                                                                              aria-hidden="true"></i> Logout</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown04">
+                            <a class="dropdown-item" href="{% url 'logout' %}" style="color: black;">Logout</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<!-- END header -->
+</body>

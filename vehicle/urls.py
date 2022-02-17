@@ -1,0 +1,36 @@
+from django.urls import path
+from . import views
+
+
+urlpatterns = [
+    path("", views.home, name='home'),
+    path("user_login/", views.user_login, name='user_login'),
+    path("user_signup/", views.user_signup, name='user_signup'),
+    path("mechanic_login/", views.mechanic_login, name='mechanic_login'),
+    path("mechanic_signup/", views.mechanic_signup, name='mechanic_signup'),
+    path("admin_login/", views.admin_login, name='admin_login'),
+    path("admin_signup/", views.admin_signup, name='admin_signup'),
+    path("logout/", views.logout, name='logout'),
+    path("contact/", views.contact, name='contact'),
+    path("about/", views.about, name='about'),
+    path("admin_dashboard/", views.admin_dashboard, name='admin_dashboard'),
+    path("view_personnel/", views.admin_view_all_personnel, name='view_personnel'),
+    path("user_dashboard/", views.user_dashboard, name='user_dashboard'),
+    path("mechanic_dashboard/", views.mechanic_dashboard, name='mechanic_dashboard'),
+    path("attendance_mechanic/", views.mechanic_attendance, name='mechanic_attendance'),
+    path("customer_request/", views.customer_request, name='customer_request'),
+    path("customer_feedback/", views.leave_feedback, name='customer_feedback'),
+    path("delete_request/<int:id>/", views.delete_request, name='delete_request'),
+    path("update_request/<int:id>/", views.UpdateRequest.as_view(), name='update_request'),
+    path("single_customer/<int:id>/", views.get_single_customer, name='single_customer'),
+    path("delete_customer/<int:id>/", views.delete_customer, name='delete_customer'),
+    path("single_mechanic/<int:id>/", views.get_single_mechanic, name='single_mechanic'),
+    path("delete_mechanic/<int:id>/", views.delete_mechanic, name='delete_mechanic'),
+    path("admin/update_mechanic/<int:id>/", views.UpdateMechanic.as_view(), name='admin_mechanic_update'),
+    path("feedback/", views.admin_feedback, name='admin_feedback'),
+    path("feedback/<int:id>/", views.delete_feedback, name='delete_feedback'),
+    path("attendance/", views.view_attendance, name='attendance'),
+    path("attendance/<int:id>/", views.delete_attendance, name='delete_attendance'),
+    path("letter/", views.letter, name='admin_letter'),
+    path("contact_admin/", views.view_contact, name='admin_contact'),
+]

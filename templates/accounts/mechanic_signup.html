@@ -1,0 +1,60 @@
+{% extends "others/base1.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block name %}
+
+<body style="background: rgba(212, 205, 207, 0.5);">
+   <h1 style="margin-bottom: 3%;"></h1>
+  <div class="both container">
+    <form action="." enctype="multipart/form-data" method="POST">{% csrf_token %}
+        <fieldset class="field" style=" box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; border: 1px solid silver;">
+             <div class="join" style="background: rgba(220, 20, 60, 0.6); text-transform: uppercase; font-family: 'Amiri', serif;">Create an Account</div>
+             <br>
+              <div class="form-group1">
+                <label for="image" class="col-form-label">Image:</label>
+                  <br>
+                <input type="file" name="image">
+              </div>
+              <div class="form-group1">
+                <label for="username" class="col-form-label">Username:</label>
+                <input type="text" name="username" class="form-control">
+              </div>
+              <div class="form-group1">
+                 <label for="password" class="col-form-label">Password:</label>
+                 <input type="text" name="password" class="form-control">
+              </div>
+              <div class="form-group1">
+                  <label for="location" class="col-form-label">Location:</label>
+                  <input type="text" name="location" class="form-control">
+              </div>
+            <div class="form-group1">
+                <label for="skill" class="col-form-label">Skill:</label>
+                <select class="form-control" name="skill">
+                    <option value="Junior">Junior</option>
+                    <option value="Mid-Level">Mid-Level</option>
+                    <option value="Expert">Expert</option>
+                </select>
+            </div>
+              <div class="form-group1">
+                 <label for="email" class="col-form-label">Email:</label>
+                 <input type="text" name="email" class="form-control">
+              </div>
+              <div class="form-group1">
+                 <label for="phone" class="col-form-label">Phone:</label>
+                 <input type="text" name="phone" class="form-control">
+              </div>
+<!--              <div>-->
+<!--                {{ form|crispy }}-->
+<!--              </div>-->
+             <br>
+           <div class="sign-in">
+             <button type="submit" class="btn btn-primary" style="background: rgba(220, 20, 60, 0.6);
+             border: 1px solid silver; font-family: 'Amiri', serif;">Sign Up</button>
+           </div>
+         </fieldset>
+    </form>
+  </div>
+
+</body>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "others/base1.html" %}
+{% load static %}
+
+{% block name %}
+      <div class="status">
+          <h5>Contact Record</h5>
+          <div class="status-body">
+              {% for instance in contact %}
+                  <h1>{{ instance.id }}- Username: {{ instance.name }}</h1>
+                  <h2>----Email: {{ instance.email }}</h2>
+                  <h2>----Phone: {{ instance.phone }}</h2>
+                  <p>----message: {{ instance.message }}</p>
+              {% endfor %}
+          </div>
+      </div>
+{% endblock%}

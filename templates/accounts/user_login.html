@@ -1,0 +1,57 @@
+{% extends "others/base1.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block name %}
+<body style="background: rgba(212, 205, 207, 0.5);">
+  <section class="ftco-section" style="margin-left: 5%; margin-top: 5%;">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-1">
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-12 col-lg-9">
+					<div class="wrap d-md-flex" >
+						<div class="text-wrap p-4 p-lg-5 text-center d-flex align-items-center order-md-last"
+							 style="background: rgba(220, 20, 60, 0.6);">
+							<div class="text w-100" style="color: white;">
+
+								<h2 style="font-family: 'Rajdhani', sans-serif; font-size: 1.5rem;">Employee ? </h2>
+								<a href="{% url 'mechanic_login' %}" class="butt"
+								   style="animation: none; color: white;
+								   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+								   border: 1px solid silver;">Sign In</a>
+								<p style="visibility: hidden;">Already have an account</p>
+							</div>
+			            </div>
+						<div class="login-wrap p-4 p-lg-5" style=" border: 1px solid silver; background: #fff; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+			         	<div class="d-flex">
+			      		  <div class="w-100">
+			      			<h3 class="mb-4" style="font-family: 'Rajdhani', sans-serif;">Customer Login <i class="fa fa-check" aria-hidden="true" style="color: rgba(220, 20, 60, 0.6);"></i></h3>
+			      		 </div>
+			      	</div>
+                    <form action="." method="POST" class="signin-form" >{% csrf_token %}
+                        <div class="form-group">
+                          <label for="username" class="col-form-label">Username:</label>
+                          <input type="text" name="username" class="form-control">
+						</div>
+                        <div class="form-group">
+                           <label for="password" class="col-form-label">Password:</label>
+                           <input type="text" name="password" class="form-control">
+                        </div>
+		            <div class="form-group">
+		            	<button type="submit" class="form-control btn btn- submit px-3"
+								style="animation: none; font-weight: bold; font-family: 'Rajdhani', sans-serif;
+								background: rgba(220, 20, 60, 0.6); color: white;">Sign In</button>
+		            </div>
+		          </form>
+				   <div class="man"><a href="{% url 'user_signup' %}"><span style="color: #222;">Customer Sign Up</span>  <i class="fa fa-external-link" aria-hidden="true"></i></a></div>
+		        </div>
+		      </div>
+				</div>
+			</div>
+		</div>
+	</section>
+  </body>
+{% endblock %}

@@ -1,0 +1,87 @@
+{% extends "others/base3.html" %}
+{% load static %}
+
+{% block name %}
+
+<div class="admin">
+    <div class="customer-head">
+        <div class="customer" data-aos="zoom-in-right">
+            {% if customer.image.url is not None %}
+            <img src="{{ customer.image.url }}" alt="{{ customer }}"/>
+            {% else %}
+            <img src="{% static 'images/default.jpg' %}" alt="{{ customer }}"/>
+            {% endif %}
+            <h1><i class="fa fa-user" aria-hidden="true"></i> <span style="color: black;">{{ customer }}!</span></h1>
+            <h1 style="color: rgba(0, 255, 0, 0.5);"><i class="fa fa-circle"></i><span>online</span></h1>
+            <h1><a href="/single_customer/{{ customer.id }}"><i class="fa fa-edit"></i> <span style="color: black;">Info</span></a></h1>
+        </div>
+        <div class="second-admin" data-aos="zoom-in-left">
+            <div class="second-admin-head">
+                <div class="second-admin-body">
+                    <h1>{{ completed }}</h1>
+                    <p><i class="fa fa-shopping-bag" aria-hidden="true"></i></p>
+                </div>
+                <h2>Vehicle Repaired</h2>
+            </div>
+            <div class="second-admin-head">
+                <div class="second-admin-body">
+                    <h1>{{ progress }}</h1>
+                    <p><i class="fa fa-renren" aria-hidden="true"></i></p>
+                </div>
+                <h2>Repair In Progress</h2>
+            </div>
+            <div class="second-admin-head">
+                <div class="second-admin-body">
+                    <h1>{{ request }}</h1>
+                    <p><i class="fa fa-line-chart" aria-hidden="true"></i></p>
+                </div>
+                <h2>New Request Made</h2>
+            </div>
+            <div class="second-admin-head">
+                <div class="second-admin-body">
+                    <h1>{{ pending }}</h1>
+                    <p><i class="fa fa-check" aria-hidden="true"></i></p>
+                </div>
+                <h2>Pending</h2>
+            </div>
+        </div>
+    </div>
+    <div class="table-responsive" style="margin-top: 5%;" data-aos="fade-right">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th scope="col">Username</th>
+                <th scope="col">Vehicle No.</th>
+                <th scope="col">Vehicle Name</th>
+                <th scope="col">Vehicle Model</th>
+                <th scope="col">Vehicle Brand</th>
+                <th scope="col">Problem Description</th>
+                <th scope="col">Cost</th>
+                <th scope="col">Status</th>
+                <th scope="col">Delete</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for r in status %}
+            <tr>
+                <td>{{ r.customer }}</td>
+                <td>{{ r.vehicle_no }}</td>
+                <td>{{ r.vehicle_name }}</td>
+                <td>{{ r.vehicle_model }}</td>
+                <td>{{ r.vehicle_brand }}</td>
+                <td>{{ r.problem_description }}</td>
+                {% if r.cost is None %}
+                <td>$0</td>
+                {% else %}
+                <td>${{ r.cost }}</td>
+                {% endif %}
+                <td>{{ r.status }}</td>
+                <td><a class="btn btn-danger" href="/delete_request/{{ r.id }}"><i class="fa fa-trash"></i></a>
+                </td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock%}

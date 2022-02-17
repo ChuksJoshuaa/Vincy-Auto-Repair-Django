@@ -1,0 +1,20 @@
+{% extends "others/base1.html" %}
+{% load static %}
+{% load humanize %}
+
+{% block name %}
+<div class="status">
+    <h5>Feedback Record</h5>
+    <div class="status-body">
+        {% for instance in feedback %}
+        <h1>{{ instance.id }}- Username: {{ instance.username }}</h1>
+        <h2>----message: {{ instance.message }}</h2>
+        {% if instance.date is None %}
+        <p>----Posted: 3 Days ago</p>
+        {% else %}
+        <p>----Posted: {{ instance.date| naturaltime }}</p>
+        {% endif %}
+        {% endfor %}
+    </div>
+</div>
+{% endblock%}

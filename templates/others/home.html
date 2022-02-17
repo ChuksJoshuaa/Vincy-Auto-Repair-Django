@@ -1,0 +1,333 @@
+{% extends 'others/base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet">
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" xmlns="http://www.w3.org/1999/html">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" id="home">
+        <div class="carousel-item active">
+            <img class="d-block w-100 h-100" style="height: 100%;" src="{% static 'images/car8.jpg' %}"
+                 alt="First slide">
+            <div class="carousel-caption">
+                <div data-aos="fade-right">
+                    <h1>AFFORDABLE AND BEST CAR SERVICES
+                        <span style="font-size: 2.7rem;"><i class="fa fa-check" aria-hidden="true"></i></span></h1>
+                    <h2>Car Repairing</h2>
+                    <button class="butt"><a href="{% url 'contact' %}" style="color: white;">Get Appointment</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100 h-100" style="height: 100%;" src="{% static 'images/car00.jpg' %}"
+                 alt="Second slide">
+            <div class="carousel-caption .d-xl-block d-block">
+                <div data-aos="fade-right">
+                    <h1>AUTO AND CAR SERVICES <span style="font-size: 2.7rem;"><i class="fa fa-bug"
+                                                                                  aria-hidden="true"></i></span></h1>
+                    <h2>Car Detailing</h2>
+                    <button class="butt"><a href="{% url 'contact' %}" style="color: white;">Get Appointment</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100 h-100" style="height: 100%;" src="{% static 'images/car0.jpg' %}"
+                 alt="Third slide">
+            <div class="carousel-caption .d-xl-block d-md-block">
+                <div data-aos="fade-right">
+                    <h1>Bask in the limelight <span style="font-size: 2.7rem;"><i class="fa fa-lightbulb-o"
+                                                                                  aria-hidden="true"></i></span></h1>
+                    <h2>Car Rental</h2>
+                    <button class="butt"><a href="{% url 'contact' %}" style="color: white;">Get Appointment</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+<main>
+    <div class="service">
+        <div class="first-head" data-aos="zoom-in-right">
+            <div class="first-born">
+                <img src="{% static 'images/name.jpg' %}" alt="image"/>
+                <p>Preventive Maintenance</p>
+            </div>
+            <div class="second-born">
+                <img src="{% static 'images/kar.jpg' %}" alt="image"/>
+                <p>Corrective Maintenance</p>
+            </div>
+        </div>
+        <div>
+            <div class="second-head" data-aos="zoom-in-left">
+                <div class="second-child">
+                    <img src="{% static 'images/sus.jpg' %}" alt="image"/>
+                    <div class="second-bro">
+                        <h1>SUSPENSION SYSTEMS</h1>
+                        <p> a nutshell, your car's suspension system is a protective
+                            lattice of shock-absorbing components such as springs and
+                            dampers
+                        </p>
+                    </div>
+                </div>
+                <div class="second-child">
+                    <img src="{% static 'images/brake.jfif' %}" alt="image"/>
+                    <div class="second-bro">
+                        <h1>BRAKE SYSTEMS</h1>
+                        <p>The brake system takes the kinetic energy of your moving
+                            vehicle and converts it to thermal energy through friction,
+                            Usually used for the back wheels
+                        </p>
+                    </div>
+                </div>
+                <div class="second-child">
+                    <img src="{% static 'images/halo.jpg' %}" alt="image"/>
+                    <div class="second-bro">
+                        <h1>HALO HEADLIGHTS</h1>
+                        <p>The brightness of the LEDs makes your vehicle easily visible
+                            in all lighting conditions while the halo adds a more striking
+                            look to your car.
+                        </p>
+                    </div>
+                </div>
+                <div class="second-child">
+                    <img src="{% static 'images/air.jfif' %}" alt="image"/>
+                    <div class="second-bro">
+                        <h1>AIR INTAKES</h1>
+                        <p>The entire purpose of an air intake system is to provide your engine
+                            with oxygen, which is essential for burning gasoline to fuel your car.
+                        </p>
+                    </div>
+                </div>
+                <div class="second-child">
+                    <img src="{% static 'images/turb.jfif' %}" alt="image"/>
+                    <div class="second-bro">
+                        <h1>TURBINE SYSTEMS</h1>
+                        <p> turbine is a device that harnesses the kinetic energy of some fluid
+                            such as water, steam, air, or combustion gases
+                        </p>
+                    </div>
+                </div>
+                <div class="second-child">
+                    <img src="{% static 'images/ext.jfif' %}" alt="image"/>
+                    <div class="second-bro">
+                        <h1>EXHAUST SYSTEMS</h1>
+                        <p>An exhaust system is used to guide reaction exhaust gases away
+                            from a controlled combustion inside an engine or stove
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<section class="section-head">
+    <div class="section-body" data-aos="flip-left">
+        <div class="section-first">
+            <h4>SOME STATISTICS <i class="fa fa-check" aria-hidden="true" style="color: crimson;"></i> ABOUT US</h4>
+            <h1>AUTO REPAIR TECHNICAL STATISTICS</h1>
+            <h2>YOU MUST KNOW</h2>
+        </div>
+        <div class="section-second">
+            <div class="counter-container">
+                <div class="counter-cell">
+                    <div data-purecounter-start="0" data-purecounter-end="30" data-purecounter-duration="2" data-purecounter-delay="10"
+                         class="purecounter">1
+                    </div>
+                    <span style="margin-left: 1em;"></span>
+                    <div class="counter-info"> YEARS OF <br><span>  EXPERIENCE</span></div>
+                </div>
+                <div class="counter-cell">
+                    <div data-purecounter-start="0" data-purecounter-end="300" data-purecounter-duration="10"
+                         class="purecounter">1
+                    </div>
+                    <span style="margin-left: 1em;"></span>
+                    <div class="counter-info"> TECHNICIANS & <br><span>  WORKERS</span></div>
+                </div>
+                <div class="counter-cell">
+                    <div data-purecounter-start="0" data-purecounter-end="5000" data-purecounter-duration="15"
+                         class="purecounter">1
+                    </div>
+                    <span style="margin-left: 1em;"></span>
+                    <div class="counter-info"> SATISFIED <br><span>   CUSTOMERS</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--    <script src="/js/purecounter.min.js"></script>-->
+<!--    <script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs/dist/purecounter_vanilla.js"></script>-->
+
+<div class="head-container">
+    <div class="main-container">
+        <section class="questions" data-aos="zoom-in-left">
+            <div class="title">
+                <h2>Auto Maintenance FAQs</h2>
+            </div>
+            <div class="section-center">
+                <article class="question">
+                    <div class="question-title">
+                        <p>How often should I get my oil changed?</p>
+                        <button type="button" class="question-btn">
+                            <span class="plus-icon"><i class="far fa-plus-square"></i></span>
+                            <span class="minus-icon"><i class="far fa-minus-square"></i></span>
+                        </button>
+                    </div>
+                    <div class="question-text">
+                        <p>
+                            For a long time and sometimes still today, standard practice
+                            at many lube shops is to suggest oil changes every three
+                            months or 3,000 miles. In order to know when the best time
+                            to get your oil changed is, check the owner’s manual of your
+                            specific model for manufacturer-recommended intervals.
+                        </p>
+                    </div>
+                </article>
+                <article class="question">
+                    <div class="question-title">
+                        <p>Should I worry about servicing my leased vehicle?</p>
+                        <button type="button" class="question-btn">
+                            <span class="plus-icon"><i class="far fa-plus-square"></i></span>
+                            <span class="minus-icon"><i class="far fa-minus-square"></i></span>
+                        </button>
+                    </div>
+                    <div class="question-text">
+                        <p>
+                            In order to keep your new lease car in the best possible
+                            condition, you must service it at regular intervals as
+                            advised by the manufacturer. ... By keeping your car
+                            in a good condition with regular servicing, you will
+                            also be less likely to incur high garage charges or fair
+                            wear and tear charges in the future.
+                        </p>
+                    </div>
+                </article>
+                <article class="question">
+                    <div class="question-title">
+                        <p>Do I need to charge my battery after I jump-start my vehicle?</p>
+                        <button type="button" class="question-btn">
+                            <span class="plus-icon"><i class="far fa-plus-square"></i></span>
+                            <span class="minus-icon"><i class="far fa-minus-square"></i></span>
+                        </button>
+                    </div>
+                    <div class="question-text">
+                        <p>
+                            Remember: After you've done a jump start, you'll
+                            need to keep the vehicle's engine running for around
+                            30 minutes to allow the alternator time to charge the
+                            battery sufficiently.
+                        </p>
+                    </div>
+                </article>
+                <article class="question">
+                    <div class="question-title">
+                        <p>How do I know when I need new brakes?</p>
+                        <button type="button" class="question-btn">
+                            <span class="plus-icon"><i class="far fa-plus-square"></i></span>
+                            <span class="minus-icon"><i class="far fa-minus-square"></i></span>
+                        </button>
+                    </div>
+                    <div class="question-text">
+                        <p>
+                            You might need a flashlight to get a good look at the
+                            brake pad. If the pads look thin, less than 1/4",
+                            it might be time to get them replaced. On some brake
+                            pads, you might see a wear indicator slot down the center
+                            of the pad. If the slot is gone or just barely visible,
+                            it's time for new brake pads.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <div class="cont" id="specialist" data-aos="zoom-in-right">
+            <h1>Our Specialists</h1>
+            <div id="carouselExampleControls" class="carousel slide mb-4" data-ride="carousel">
+                <ol class="carousel-indicators come">
+                    <li data-target="#carouselExampleControls" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleControls" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleControls" data-slide-to="2"></li>
+                    <li data-target="#carouselExampleControls" data-slide-to="3"></li>
+                    <li data-target="#carouselExampleControls" data-slide-to="4"></li>
+                    <li data-target="#carouselExampleControls" data-slide-to="5"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active obey">
+                        <img class="d-block w-100 h-100" src="{% static 'images/black.jpg' %}" alt="First slide">
+                        <div class="carousel-caption">
+                            <!--                           <h5 class="badge badge-secondary text-white">HARRY A. DEDMON</h5>-->
+                        </div>
+                    </div>
+                    <div class="carousel-item obey">
+                        <img class="d-block w-100 h-100" src="{% static 'images/woman.jpg' %}" alt="First slide">
+                        <div class="carousel-caption">
+                            <!--                        <h5 class="badge badge-secondary text-white">Jessie Fyra</h5>-->
+                        </div>
+                    </div>
+                    <div class="carousel-item obey">
+                        <img class="d-block w-100 h-100" src="{% static 'images/person4.jpg' %}" alt="First slide">
+                        <div class="carousel-caption">
+                            <!--                        <h5 class="badge badge-secondary text-white">Carson James</h5>-->
+                        </div>
+                    </div>
+                    <div class="carousel-item obey">
+                        <img class="d-block w-100 h-100" src="{% static 'images/person5.jpg' %}" alt="First slide">
+                        <div class="carousel-caption">
+                            <!--                        <h5 class="badge badge-secondary text-white">Nico Morgan</h5>-->
+                        </div>
+                    </div>
+                    <div class="carousel-item obey">
+                        <img class="d-block w-100 h-100" src="{% static 'images/person3.jpg' %}" alt="First slide">
+                        <div class="carousel-caption">
+                            <!--                        <h5 class="badge badge-secondary text-white">John Cairo</h5>-->
+                        </div>
+                    </div>
+                    <div class="carousel-item obey">
+                        <img class="d-block w-100 h-100" src="{% static 'images/person2.jpg' %}" alt="First slide">
+                        <div class="carousel-caption">
+                            <!--                        <h5 class="badge badge-secondary text-white">Gary Freeman</h5>-->
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon yes" aria-hidden="true"></span><span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon no" aria-hidden="true"></span><span
+                        class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="cent" data-aos="fade-right">
+    <div class="section-cent">
+        <h3>Subscribe to our newsletter and get 20% off</h3>
+        <div class="content">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Est nihil,
+                nemo quisquam ratione ad ipsa amet et deserunt tempore repudiandae?
+            </p>
+            <form class="contact-form" action="." autocomplete="off" method="POST">{% csrf_token %}
+                <input type="email" class="form-input" placeholder="enter email" name="email"/>
+                <button type="submit" class="submit-btn">subscribe</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

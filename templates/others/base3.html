@@ -1,0 +1,68 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'fonts/icomoon/style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/aos.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital@1&family=Cormorant+Garamond:wght@300&family=Racing+Sans+One&family=Rajdhani:wght@500&family=Roboto+Mono:wght@100&display=swap"
+          rel="stylesheet">
+    <title>Car Services</title>
+</head>
+<body>
+{% include 'others/navbar2.html' %}
+{% include 'others/alert.html' %}
+
+{% block name %}
+
+{% endblock %}
+
+{% include 'others/footer.html' %}
+
+<script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+<script src="{% static 'js/popper.min.js' %}"></script>
+<script src="{% static 'js/aoss.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/jquery.sticky.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+<!--    <script src="{% static 'main.js' %}"></script>-->
+<script>
+AOS.init({
+    duration: 2000,
+    easing: "ease",
+    once: true,
+    mirror: true,
+    offset: 120,
+});
+AOS.refresh()
+
+const pure = new PureCounter();
+
+new PureCounter();
+
+new PureCounter({
+    duration: 2,
+    delay: 10,
+    once: false,
+    repeat: false,
+    decimals: 0,
+    legacy: true,
+    filesizing: false,
+    currency: false,
+    separator: false,
+});
+
+</script>
+
+</body>
+</html>

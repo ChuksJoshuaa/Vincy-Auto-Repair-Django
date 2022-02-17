@@ -1,0 +1,14 @@
+{% extends "others/base1.html" %}
+{% load static %}
+
+{% block name %}
+<div class="status">
+    <h5>Newsletter Subscription</h5>
+    <div class="status-body">
+        {% for instance in newsletter %}
+        <h2 style="margin-top: 2%;">{{ instance.id }}- Email: {{ instance.email }}  <i class="fa fa-check"></i></h2>
+        <p></p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock%}

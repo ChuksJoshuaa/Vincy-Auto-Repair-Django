@@ -1,0 +1,18 @@
+{% extends "others/base3.html" %}
+{% load static %}
+
+{% block name %}
+  <div class="single">
+      <div class="single-head">
+          <h1 style="margin-bottom: 2%;"></h1>
+          <img src="{{ customer.image.url }}" alt="{{ customer.username }}"/>
+          <h1><i class="fa fa-user"></i> {{ customer.username }}</h1>
+          <h2><i class="fa fa-envelope"></i> {{ customer.email }}</h2>
+          <p><i class="fa fa-map"></i> {{ customer.location }}</p>
+          <p><i class="fa fa-phone"></i><a href="tel:{{ customer.phone }}">{{ customer.phone }}</a></p>
+      </div>
+  </div>
+{% endblock%}
+
+<!--in this case i used object.name blah blah blah-->
+<!--{% url 'prod-update' object.id %}-->

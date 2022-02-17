@@ -1,0 +1,24 @@
+{% extends 'others/base.html' %}
+{% load static %}
+
+{% block content %}
+
+         {% if about %}
+           {% for instance in about %}
+              <div class="video">
+                 <div class="video-main">
+                   <div class="video-head" data-aos="zoom-in-right">
+                     <video controls style="height: 500px;">
+                         <source src="https://res.cloudinary.com/chuksmbanaso/video/upload/v1643971469/media/carvideo1_eagcg9.mp4" type="video/mp4">
+                     </video>
+                   </div>
+                   <div class="video-body" data-aos="zoom-in-left">
+                       <h1>{{ instance.title }}</h1>
+                       <p>{{ instance.description }}</p>
+                   </div>
+                 </div>
+              </div>
+           {% endfor %}
+         {% endif %}
+{% endblock %}
+
