@@ -10,7 +10,7 @@
 
 - [Python 3](https://www.python.org/) - Programming language that lets you work quickly and integrate systems more effectively
 
-- [Javascript](https://www.javascript.com) - It is a text-based programming language used both on the client-side and server-side that allows you to make web pages interactive.
+- [Javascript](https://www.javascript.com) - It is a text-based programming language used both on the client-side and server-side that allows you to make web pages interactive..
 
 - [Django](https://www.djangoproject.com/) - Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design
 
