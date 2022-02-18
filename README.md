@@ -1,6 +1,6 @@
 # Vincy Auto Repair (Full Stack Frameworks with Django Project)
 
-> > Fully reponsive Vincy Application. From development to deployment.
+> > Fully reponsive Vincy Application. From development to deployment..
 
 <img src="https://res.cloudinary.com/chuksmbanaso/image/upload/v1645079268/media/Screenshot_26_flgkhu.png" title="Vincy" alt="Vincy">
 
