@@ -25,7 +25,7 @@
 
 - [Pillow](https://pillow.readthedocs.io/en/5.3.x/) - Pillow is the friendly PIL fork. PIL is the Python Imaging Library...
 
-- [FontAwesome](https://fontawesome.com/) -  Font Awesome is designed to be used with inline elements (we like the <i> tag for brevity, but using a <span> is more semantically correct)..
+- [FontAwesome](https://fontawesome.com/) -  Font Awesome is designed to be used with inline elements (we like the <i> tag for brevity, but using a <span> is more semantically correct)...
 
 - [PgAdmin](https://www.pgadmin.org/) - Open Source administration and development platform for PostgreSQL..
 
