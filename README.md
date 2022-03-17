@@ -16,7 +16,7 @@
 
 - [Cloudinary](https://cloudinary.com/) - Cloudinary provides a secure and comprehensive API for easily uploading media files from server-side code, directly from the browser or from a mobile application.
 
-- [PostgreSQL](https://www.postgresql.org/) - Object-relational database management system (ORDBMS) with an emphasis on extensibility and standards.
+- [PostgreSQL](https://www.postgresql.org/) - Object-relational database management system (ORDBMS) with an emphasis on extensibility and standards..
 
 - [Bootstrap](https://getbootstrap.com/) - Open source toolkit for developing with HTML, CSS, and JS...
 
