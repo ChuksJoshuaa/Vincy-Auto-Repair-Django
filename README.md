@@ -14,7 +14,7 @@
 
 - [Django](https://www.djangoproject.com/) - Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design...
 
-- [Cloudinary](https://cloudinary.com/) - Cloudinary provides a secure and comprehensive API for easily uploading media files from server-side code, directly from the browser or from a mobile application.
+- [Cloudinary](https://cloudinary.com/) - Cloudinary provides a secure and comprehensive API for easily uploading media files from server-side code, directly from the browser or from a mobile application..
 
 - [PostgreSQL](https://www.postgresql.org/) - Object-relational database management system (ORDBMS) with an emphasis on extensibility and standards...
 
