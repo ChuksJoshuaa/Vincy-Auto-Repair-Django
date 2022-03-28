@@ -4,7 +4,7 @@
 
 <img src="https://res.cloudinary.com/chuksmbanaso/image/upload/v1645079268/media/Screenshot_26_flgkhu.png" title="Vincy" alt="Vincy">..
 
-<img src="https://res.cloudinary.com/chuksmbanaso/image/upload/v1645079281/media/Screenshot_27_ktath0.png" title="Vincy" alt="Vincy">..
+<img src="https://res.cloudinary.com/chuksmbanaso/image/upload/v1645079281/media/Screenshot_27_ktath0.png" title="Vincy" alt="Vincy">...
 
 ## Built With
 
