@@ -41,7 +41,7 @@
 
 - Ensure you have Python 3 and Postgres installed and create a virtual environment and activate it...
 
-- Install dependencies: pip3 install -r requirements.txt..
+- Install dependencies: pip3 install -r requirements.txt...
 
 ## Deployment
 
